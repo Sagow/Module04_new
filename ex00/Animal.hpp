@@ -11,7 +11,7 @@ class Animal
 
 		Animal();
 		Animal( Animal const & src );
-		~Animal();
+		virtual ~Animal();
 		Animal &		operator=( Animal const & rhs );
 
 		Animal(std::string type);
@@ -21,7 +21,7 @@ class Animal
 
 	protected:
 
-		std::string	_type;
+		std::string	type;
 
 	private:
 

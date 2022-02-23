@@ -35,7 +35,7 @@ Cat::~Cat()
 
 Cat &		Cat::operator=( Cat const & rhs )
 {
-	_type = rhs._type;
+	type = rhs.type;
 	delete _brain;
 	_brain = new Brain(*rhs._brain);
 	return (*this);

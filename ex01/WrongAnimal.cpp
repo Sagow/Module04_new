@@ -7,18 +7,18 @@
 WrongAnimal::WrongAnimal()
 {
 	std::cout << "WrongAnimal default constuctor" << std::endl;
-	_type = "default";
+	type = "default";
 }
 
 WrongAnimal::WrongAnimal(std::string type)
 {
 	std::cout << "WrongAnimal constructor, type = " << type << std::endl;
-	_type = type;
+	this->type = type;
 }
 
 WrongAnimal::WrongAnimal( const WrongAnimal & src )
 {
-	std::cout << "WrongAnimal copy constructor, copying a " << src._type << std::endl;
+	std::cout << "WrongAnimal copy constructor, copying a " << src.type << std::endl;
 	*this = src;
 }
 
@@ -39,7 +39,7 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal &				WrongAnimal::operator=( WrongAnimal const & rhs )
 {
-	_type = rhs._type;
+	type = rhs.type;
 	return *this;
 }
 
@@ -54,7 +54,7 @@ void	WrongAnimal::makeSound() const
 
 std::string	WrongAnimal::getType() const
 {
-	return (_type);
+	return (type);
 }
 
 /*

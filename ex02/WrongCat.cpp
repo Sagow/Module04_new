@@ -32,7 +32,7 @@ WrongCat::~WrongCat()
 
 WrongCat &		WrongCat::operator=( WrongCat const & rhs )
 {
-	_type = rhs._type;
+	type = rhs.type;
 	return (*this);
 }
 

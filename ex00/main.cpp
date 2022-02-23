@@ -14,18 +14,21 @@ const Animal* k = new Animal("canari");
 const WrongAnimal* w_meta = new WrongAnimal();
 const WrongAnimal* w_i = new WrongCat();
 
-
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-std::cout << k->getType() << " " << std::endl;
-i->makeSound(); //will output the cat sound!
+std::cout << std::endl << "Animal -> sound :" << std::endl;
+std::cout << j->getType() << " says " << std::endl;
 j->makeSound();
-meta->makeSound();
+std::cout << i->getType() << " says " << std::endl;
+i->makeSound(); //will output the cat sound!
+std::cout << k->getType() << " says " << std::endl;
 k->makeSound();
+std::cout << "Default Animal sound :" << std::endl;
+meta->makeSound();
 
-std::cout << w_i->getType() << " " << std::endl;
-std::cout << w_meta->getType() << " " << std::endl;
+
+std::cout << std::endl << "Testing Wrong Animals :" << std::endl;
+std::cout << w_i->getType() << " says " << std::endl;
 w_i->makeSound(); //will NOT output the cat sound!
+std::cout << w_meta->getType() << " says " << std::endl;
 w_meta->makeSound();
 
 delete meta;

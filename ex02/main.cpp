@@ -12,16 +12,19 @@ Cat				*Inox = new Cat();
 Cat				Moumoune;
 // Animal          neMarchePas = new Animal();
 
-std::cout << Inox->getType() << " " << std::endl;
+std::cout << Inox->getType() << " says " << std::endl;
 Inox->makeSound();
-std::cout << "Inox :" << std::endl;
+std::cout << std::endl << "Inox thinks :" << std::endl;
 Inox->print_ideas();
+std::cout << std::endl << "Copying Inox into Moumoune, then deleting Inox" << std::endl;
 Moumoune = *Inox;
-std::cout << "Moumoune :" << std::endl;
+delete Inox;
+std::cout << std::endl << "Moumoune thinks :" << std::endl;
 Moumoune.print_ideas();
+
+std::cout << std::endl;
 
 delete j;
 delete i;
-delete Inox;
 return 0;
 }

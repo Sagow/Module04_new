@@ -32,7 +32,7 @@ Cat::~Cat()
 
 Cat &		Cat::operator=( Cat const & rhs )
 {
-	_type = rhs._type;
+	type = rhs.type;
 	return (*this);
 }
 

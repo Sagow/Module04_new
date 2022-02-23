@@ -21,7 +21,7 @@ class Animal
 
 	protected:
 
-		std::string	_type;
+		std::string	type;
 
 	private:
 
