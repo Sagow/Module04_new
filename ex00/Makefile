@@ -1,13 +1,20 @@
 SRCS =  main.cpp\
-         Animal.cpp\
-         Cat.cpp\
-		 Dog.cpp\
-		 WrongAnimal.cpp\
-		 WrongCat.cpp\
+        Animal.cpp\
+        Cat.cpp\
+		Dog.cpp\
+		WrongAnimal.cpp\
+		WrongCat.cpp\
+
+HEADERS = Animal.hpp\
+		Cat.hpp\
+		Dog.hpp\
+		WrongAnimal.hpp\
+		WrongCat.hpp
 
 OBJS =  ${SRCS:.cpp=.o}
 
 CC =    c++
+
 
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
@@ -18,7 +25,7 @@ all: ${NAME}
 ${NAME}:	${OBJS}
 		${CC} ${FLAGS} ${OBJS} -o ${NAME}
 
-%.o: %.cpp
+%.o: %.cpp $(HEADERS)
 		$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
